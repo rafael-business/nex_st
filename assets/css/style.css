@@ -127,25 +127,32 @@ b {
     border-bottom-color: white;
 }
 
-aside#blog .inner {
+aside#feed .inner {
     background-color: #f1f3f4;
 }
 
 aside#contato .inner {
     padding: 0;
-    height: 680px;
-    border-bottom-left-radius: 6px;
+    height: 640px;
+    border-bottom-left-radius: 12px;
     border-bottom-right-radius: 6px;
     display: flex;
+    box-shadow: 12px 12px 18px rgba(0,0,0,.5);
 }
 
 aside#contato iframe {
-    flex: 1 0 600px;
+    flex: 1 0 640px;
     border-bottom-left-radius: 6px;
 }
 
+aside#contato img {
+    flex: 1 0 640px;
+    border-bottom-left-radius: 6px;
+    z-index: 99999;
+}
+
 aside#contato form h3 {
-    margin: 50px 0 0 64px;
+    margin: 55px 0 0 64px;
 }
 
 aside#contato form .row {
@@ -155,12 +162,24 @@ aside#contato form .row {
     gap: 18px;
 }
 
+.clearfix {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
 aside#contato form .row .col-md-12 {
     flex: 1 0 100%;
 }
 
 aside#contato form .row .col-md-8 {
     flex: 8;
+}
+
+aside#contato form .row .col-md-6 {
+    flex: 6;
 }
 
 aside#contato form .row .col-md-4 {
@@ -279,6 +298,15 @@ footer .copy img {
     margin-bottom: 16px;
 }
 
+.big2 {
+    font-size: 45px;
+    margin-bottom: 16px;
+}
+
+.afast {
+    margin-left: 12px;
+}
+
 .colored {
     color: gray;
 }
@@ -330,10 +358,10 @@ table.host td:nth-child(2n), table.host td:nth-child(3n) {
 
 table.host tr td.sinais {
     padding: 0;
-    width: 150px;
+    width: 240px;
 }
 
-table.host tr td.sinais img {
+table.host tr th img {
     max-width: 140px;
 }
 
@@ -353,4 +381,48 @@ table.host tr td.yes div.sinal {
 table.host tr td.nop div.sinal {
     background-color: hsl(348, 100%, 61%);
     font-size: 24px;
+}
+
+abbr {
+    text-decoration: none;
+    cursor: help;
+}
+
+.gaia {
+    position: relative;
+    line-height: 150%;
+}
+
+.gaia::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: -66px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/temp/coworking-gaia.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.agendar {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.agendar:hover {
+    border: none;
+}
+
+footer h4 {
+    margin-bottom: 8px;
+}
+
+.big-lists li img {
+    margin-bottom: 16px;
+    opacity: .2;
+}
+
+.instagram {
+    margin: 40px -64px -120px -64px !important;
 }
