@@ -59,6 +59,9 @@ b {
 
 .hero .inner .titles {
     padding: 0 32px 0 85px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
 .logo, .menu {
@@ -75,7 +78,7 @@ b {
 }
 
 .titles h1 span {
-    opacity: .85;
+    opacity: .95;
 }
 
 .features {
@@ -135,17 +138,17 @@ aside#contato .inner {
     padding: 0;
     height: 640px;
     border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 12px;
     display: flex;
-    box-shadow: 12px 12px 18px rgba(0,0,0,.5);
 }
 
-aside#contato iframe {
-    flex: 1 0 640px;
-    border-bottom-left-radius: 6px;
+aside#contato form {
+    background-color: rgb(36 47 62 / 100%);
+    color: white;
+    border-bottom-right-radius: 6px;
 }
 
-aside#contato img {
+aside#contato .maps {
     flex: 1 0 640px;
     border-bottom-left-radius: 6px;
     z-index: 99999;
@@ -194,7 +197,6 @@ aside#contato form .form-group {
 
 aside#contato form .form-group .control-label {
     font-weight: 500;
-    color: #32373C;
 }
 
 aside#contato form .form-group .form-control {
@@ -288,8 +290,8 @@ footer .copy img {
 }
 
 .swiper-slide {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 .big {
@@ -327,7 +329,7 @@ footer .copy img {
 
 .big-lists li {
     width: 216px;
-    height: 200px;
+    height: 160px;
 }
 
 table {
@@ -344,6 +346,9 @@ table.host {
 
 table.host tr {
     padding: 8px;
+}
+
+table.host tr:not(:last-child) {
     border-bottom: 1px solid #EDEDED;
 }
 
@@ -388,30 +393,34 @@ abbr {
     cursor: help;
 }
 
-.gaia {
+.local {
     position: relative;
     line-height: 150%;
+    margin-bottom: 32px;
 }
 
-.gaia::before {
+.local::before {
     content: '';
     position: absolute;
-    top: 55px;
-    left: -66px;
+    top: 0;
+    left: -75px;
     width: 50px;
     height: 50px;
-    background-image: url(../img/temp/coworking-gaia.png);
+    background-image: url(../img/temp/map.png);
     background-repeat: no-repeat;
     background-size: 50px;
 }
 
 .agendar {
-    display: block;
-    margin-bottom: 16px;
+    border: 1px solid white;
+    margin: 0 0 32px;
+    display: inline-block;
+    padding: 4px 16px 6px;
+    border-radius: 6px;
 }
 
 .agendar:hover {
-    border: none;
+    background-color: rgba(0,0,0,.3);
 }
 
 footer h4 {
@@ -423,6 +432,75 @@ footer h4 {
     opacity: .2;
 }
 
-.instagram {
-    margin: 40px -64px -120px -64px !important;
+.mini-call {
+    display: flex;
+    align-items: center; 
+}
+
+.mini-call > div {
+    padding: 64px 8px;
+}
+
+.mini-call .text {
+    flex: 1 0 calc(100% - 480px);
+    display: flex;
+    gap: 32px;
+}
+
+.mini-call .text .representante {
+    flex: 1 0 47%;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    background-color: rgb(36 47 62 / 100%);
+    color: #f1f3f4;
+}
+
+.mini-call .text .representante img {
+    display: block;
+    border-radius: 3px;
+    flex: 1 0 64px;
+}
+
+.mini-call .text .representante div {
+    flex: 1 0 calc(100% - 64px);
+    font-size: 95%;
+}
+
+.mini-call .text .representante .name b {
+    display: block;
+    margin: 6px 0 10px;
+    font-size: 110%;
+}
+
+.mini-call .btn {
+    flex: 1 0 480px;
+    text-align: center;
+}
+
+.mini-call .btn .button {
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    padding:  16px 32px;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+    transition: all ease .25s;
+}
+
+.mini-call .btn .button:hover {
+    box-shadow: 2px 2px 9px rgb(36 47 62 / 20%);
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 40%);
+    background-color: #f68d11;
+}
+
+.mini-call .btn .button i {
+    margin-right: 16px;
+}
+
+.online {
+    color: #01ff70;
+    margin-right: 6px;
 }
