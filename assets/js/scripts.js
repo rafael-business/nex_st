@@ -25,9 +25,7 @@ $( function(){
             type: "POST",
             url: form.attr( 'action' ),
             data: form.serialize(),
-            crossDomain: true,
-            dataType: 'jsonp',
-            encode: true,
+            dataType: 'application/x-www-form-urlencoded'
         }).
         done( function( data ){
             
